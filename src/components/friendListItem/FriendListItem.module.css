@@ -1,0 +1,12 @@
+.isOnline,
+.offline {
+  width: 20px;
+  height: 20px;
+  display: block;
+}
+.isOnline {
+  background-color: springgreen;
+}
+.offline {
+  background-color: red;
+}

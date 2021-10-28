@@ -1,0 +1,25 @@
+.transactionHistory {
+  width: 500px;
+  position: relative;
+  margin: 0 auto 30px;
+  text-align: center;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 2px 2px;
+}
+.rowTitles {
+  background-color: #1e90ff;
+  color: white;
+
+  text-transform: uppercase;
+}
+.thTitles {
+  padding: 10px 0;
+}
+td {
+  padding: 10px 0;
+}
+.tableItems:nth-child(even) {
+  background-color: #b0e0e6;
+}
+.type::first-letter {
+  text-transform: uppercase;
+}
