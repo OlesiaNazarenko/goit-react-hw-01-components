@@ -17,9 +17,3 @@
 td {
   padding: 10px 0;
 }
-.tableItems:nth-child(even) {
-  background-color: #b0e0e6;
-}
-.type::first-letter {
-  text-transform: uppercase;
-}

@@ -1,6 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import s from "./Transaction.module.css";
+import RenderTransactionContent from "../transactionTableContent/TransactionTableContent";
 
 export default function TransactionHistory({ items }) {
   return (
@@ -16,11 +17,12 @@ export default function TransactionHistory({ items }) {
       <tbody>
         {items.map(({ id, type, amount, currency }) => {
           return (
-            <tr class={s.tableItems} key={id}>
-              <td class={s.type}>{type}</td>
-              <td>{amount}</td>
-              <td>{currency}</td>
-            </tr>
+            <RenderTransactionContent
+              key={id}
+              type={type}
+              amount={amount}
+              currency={currency}
+            />
           );
         })}
       </tbody>
@@ -32,9 +34,6 @@ TransactionHistory.propTypes = {
   items: PropTypes.arrayOf(
     PropTypes.shape({
       id: PropTypes.string.isRequired,
-      type: PropTypes.string.isRequired,
-      amount: PropTypes.string.isRequired,
-      currency: PropTypes.string.isRequired,
     })
   ),
 };
