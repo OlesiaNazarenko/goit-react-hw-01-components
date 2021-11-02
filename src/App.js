@@ -1,14 +1,16 @@
+import React from "react";
+
 import Profile from "./components/socialNetworksProfile/Profile";
-import user from "./components/socialNetworksProfile/user.json";
+import user from "./data/user.json";
 
 import Statistic from "./components/statisticSection/Statistic";
-import statisticData from "./components/statisticSection/statistical-data.json";
+import statisticData from "./data/statistical-data.json";
 
 import FriendsList from "./components/friendsList/FriendsList";
-import friends from "./components/friendsList/friends.json";
+import friends from "./data/friends.json";
 
 import TransactionHistory from "./components/transactionHistory/Transaction";
-import transactions from "./components/transactionHistory/transactions.json";
+import transactions from "./data/transactions.json";
 
 export default function App() {
   return (

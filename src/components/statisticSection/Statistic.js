@@ -1,11 +1,12 @@
+import React from "react";
 import PropTypes from "prop-types";
 import s from "./Statistic.module.css";
-import getRandomColor from "../js/getRandomColor";
+import getRandomColor from "../../js/getRandomColor";
 
 export default function Statistic({ title, stats }) {
   return (
-    <section class={s.statistics}>
-      {title ? <h2 class={s.title}>Upload stats</h2> : ""}
+    <section className={s.statistics}>
+      {title ? <h2 class={s.title}>{title}</h2> : ""}
       <ul class={s.statList}>
         {stats.map(({ id, label, percentage }) => {
           return (
@@ -27,6 +28,12 @@ export default function Statistic({ title, stats }) {
 }
 
 Statistic.propTypes = {
-  label: PropTypes.string.isRequired,
-  percentage: PropTypes.number.isRequired,
+  stats: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.string.isRequired,
+      label: PropTypes.string.isRequired,
+      percentage: PropTypes.number.isRequired,
+    })
+  ).isRequired,
+  title: PropTypes.string.isRequired,
 };
