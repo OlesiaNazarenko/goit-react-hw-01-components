@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
-import s from "./Transaction.module.css";
-import RenderTransactionContent from "../transactionTableContent/TransactionTableContent";
+import s from "./TransactionHistory.module.css";
+import TransactionTableContent from "../transactionTableContent/TransactionTableContent";
 
 export default function TransactionHistory({ items }) {
   return (
@@ -17,7 +17,7 @@ export default function TransactionHistory({ items }) {
       <tbody>
         {items.map(({ id, type, amount, currency }) => {
           return (
-            <RenderTransactionContent
+            <TransactionTableContent
               key={id}
               type={type}
               amount={amount}
